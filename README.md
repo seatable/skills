@@ -52,15 +52,16 @@ documentation if it does not automatically discover the installed skill.
 
 ## Configuration
 
-Create local configuration files for the SeaTable server URL and Base API Token:
+Provide the SeaTable server URL and Base API Token as environment variables:
 
 ```bash
-mkdir -p ~/.config/seatable
-chmod 700 ~/.config/seatable
-printf '%s\n' 'https://your-seatable.example.com' > ~/.config/seatable/server
-printf '%s\n' 'your_base_api_token_here' > ~/.config/seatable/api_token
-chmod 600 ~/.config/seatable/server ~/.config/seatable/api_token
+export SEATABLE_SERVER="https://your-seatable.example.com"
+export SEATABLE_API_TOKEN="your_base_api_token_here"
 ```
+
+For desktop or hosted agents, configure these values in the agent runtime's
+environment or secret settings. A shell `export` is available only to processes
+started from that shell.
 
 Generate a Base API Token from the target base in SeaTable and grant only the
 permissions the agent needs. A token is scoped to one base.
@@ -85,8 +86,10 @@ Agents that support explicit skill invocation may also accept prompts such as:
 $seatable List all tables in the current base.
 ```
 
-The agent should ask for the server URL and Base API Token when the local
-configuration files are unavailable.
+If either environment variable is unavailable, the agent should ask the user
+to configure it in the agent environment or provide the missing value for the
+current task. The agent must treat `SEATABLE_API_TOKEN` as sensitive and never
+repeat, print, or persist it.
 
 ## Compatibility
 

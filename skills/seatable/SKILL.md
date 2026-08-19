@@ -13,19 +13,21 @@ Developer Manual: https://developer.seatable.com/
 
 ## Setup
 
+Provide the SeaTable server URL and Base API Token as environment variables:
+
 ```bash
-mkdir -p ~/.config/seatable
-echo "https://your-seatable.example.com" > ~/.config/seatable/server
-echo "your_base_api_token_here"          > ~/.config/seatable/api_token
+export SEATABLE_SERVER="https://your-seatable.example.com"
+export SEATABLE_API_TOKEN="your_base_api_token_here"
 ```
 
-Load these values before use:
+Before making requests, confirm that both variables are available without printing their values:
+
 ```bash
-SEATABLE_SERVER=$(cat ~/.config/seatable/server)
-SEATABLE_API_TOKEN=$(cat ~/.config/seatable/api_token)
+: "${SEATABLE_SERVER:?SEATABLE_SERVER is required}"
+: "${SEATABLE_API_TOKEN:?SEATABLE_API_TOKEN is required}"
 ```
 
-If the configuration files do not exist, ask the user to provide both values.
+If either variable is unavailable, ask the user to configure it in the agent environment or provide the missing value for the current task. Treat the API Token as sensitive: never repeat, print, or persist it.
 
 To obtain a Base API Token, open the target base in the web interface, select the context menu or top menu, then choose Advanced → API Token → Generate Token. The token is scoped to that base and uses the selected read/write permissions.
 
@@ -33,7 +35,7 @@ To obtain a Base API Token, open the target base in the web interface, select th
 
 SeaTable's base-level API uses a two-step authentication flow:
 
-1. Exchange the long-lived **API-Token** stored in the configuration file for a **Base-Token**:
+1. Exchange the long-lived **API-Token** provided through `SEATABLE_API_TOKEN` for a **Base-Token**:
 
 ```bash
 curl -s -H "Authorization: Token $SEATABLE_API_TOKEN" \
@@ -383,7 +385,7 @@ client.append_rows("Table1", [{"Name": "Alice", "Age": 20}])
 
 ## Important Notes
 
-- **API-Token and Base-Token are different.** The API-Token is long-lived and stored in the configuration. The Base-Token is a JWT valid for **three days**. Exchange it again after expiration and do not reuse it as a long-term cached credential.
+- **API-Token and Base-Token are different.** The API-Token is long-lived and provided through `SEATABLE_API_TOKEN`. The Base-Token is a JWT valid for **three days**. Exchange it again after expiration and do not reuse it as a long-term cached credential.
 - **Always use the current `/api-gateway/api/v2/dtables/{base_uuid}/...` endpoints.** Do not use legacy `dtable-server`/`dtable-db` (`/api/v1/...`) paths. SeaTable removed them in version 5.3, and they return 404.
 - `table_name` is case-sensitive and must exactly match the name in the base.
 - Updating or deleting a row requires its `row_id`. Obtain it from the `_id` field returned by `list_rows` or an SQL query.
