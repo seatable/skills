@@ -1,0 +1,82 @@
+[
+  {
+    "name": "literal-json",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\"};",
+    "config": {
+      "server": "https://example.invalid/service/",
+      "appUuid": "synthetic-app",
+      "pageId": "synthetic-page",
+      "accountToken": "synthetic-fixture-token"
+    }
+  },
+  {
+    "name": "comments-and-trailing-comma",
+    "source": "// local fixture\nexport /* safe comment */ default { server: 'https://example.invalid/service/', appUuid: \"synthetic-app\", pageId: 'synthetic-page', accountToken: 'synthetic-fixture-token', };",
+    "config": {
+      "server": "https://example.invalid/service/",
+      "appUuid": "synthetic-app",
+      "pageId": "synthetic-page",
+      "accountToken": "synthetic-fixture-token"
+    }
+  },
+  {
+    "name": "escaped-literal",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-\\u4e2d-\\\"-\\\\-token\"};",
+    "config": {
+      "server": "https://example.invalid/service/",
+      "appUuid": "synthetic-app",
+      "pageId": "synthetic-page",
+      "accountToken": "synthetic-中-\"-\\-token"
+    }
+  },
+  {
+    "name": "single-quoted-escapes",
+    "source": "export default { server: 'https://example.invalid/service/', appUuid: \"synthetic-app\", pageId: 'synthetic-page', accountToken: 'synthetic-\\'-\"-\\\\-\\u4e2d-token', };",
+    "config": {
+      "server": "https://example.invalid/service/",
+      "appUuid": "synthetic-app",
+      "pageId": "synthetic-page",
+      "accountToken": "synthetic-'-\"-\\-中-token"
+    }
+  },
+  {
+    "name": "missing-fields",
+    "source": "export default {};",
+    "config": null
+  },
+  {
+    "name": "extra-field",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\",\"extra\":\"synthetic\"};",
+    "config": null
+  },
+  {
+    "name": "duplicate-field",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\",\"pageId\":\"duplicate\"};",
+    "config": null
+  },
+  {
+    "name": "import",
+    "source": "import token from \"not-permitted\"; export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\"};",
+    "config": null
+  },
+  {
+    "name": "expression",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": process.env.PAGE_ID, \"accountToken\": \"synthetic-fixture-token\"};",
+    "config": null
+  },
+  {
+    "name": "template-string",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": `synthetic-page`, \"accountToken\": \"synthetic-fixture-token\"};",
+    "config": null
+  },
+  {
+    "name": "trailing-code",
+    "source": "export default {\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\"}; globalThis.SYNTHETIC_CONFIG_EXECUTED = true;",
+    "config": null
+  },
+  {
+    "name": "spread-expression",
+    "source": "export default { ...{\"server\": \"https://example.invalid/service/\", \"appUuid\": \"synthetic-app\", \"pageId\": \"synthetic-page\", \"accountToken\": \"synthetic-fixture-token\"} };",
+    "config": null
+  }
+]
