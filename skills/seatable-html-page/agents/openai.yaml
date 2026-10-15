@@ -1,0 +1,4 @@
+interface:
+  display_name: "SeaTable HTML Page"
+  short_description: "Create HTML pages in SeaTable App"
+  default_prompt: "Use $seatable-html-page to check that local development configuration is complete without repeating authentication verification, enter setup if it is missing or incomplete, then create an HTML page from the tables, fields, and business workflow I provide, choosing a single-file or Vite multi-file implementation."
