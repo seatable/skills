@@ -1,0 +1,4 @@
+interface:
+  display_name: "SeaTable HTML Page"
+  short_description: "Create SeaTable pages, preview live data, and package on request"
+  default_prompt: "Use $seatable-html-page to create an HTML page from the tables, fields, and business workflow I provide, choosing a single-file or Vite multi-file implementation."
