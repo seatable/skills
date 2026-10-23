@@ -1,0 +1,302 @@
+[
+  {
+    "name": "index.html",
+    "allowed": true
+  },
+  {
+    "name": "assets/logo.svg",
+    "allowed": true
+  },
+  {
+    "name": "assets/app-123.js",
+    "allowed": true
+  },
+  {
+    "name": "main.mjs",
+    "allowed": true
+  },
+  {
+    "name": "style.css",
+    "allowed": true
+  },
+  {
+    "name": "fonts/regular.woff2",
+    "allowed": true
+  },
+  {
+    "name": "data.json",
+    "allowed": true
+  },
+  {
+    "name": "assets/price-\u20ac.png",
+    "allowed": true
+  },
+  {
+    "name": "assets/latest.png",
+    "allowed": true
+  },
+  {
+    "name": "tests/example.test.js",
+    "allowed": false
+  },
+  {
+    "name": "test/helper.js",
+    "allowed": false
+  },
+  {
+    "name": "__tests__/index.js",
+    "allowed": false
+  },
+  {
+    "name": "coverage/report.json",
+    "allowed": false
+  },
+  {
+    "name": "assets/example.spec.mjs",
+    "allowed": false
+  },
+  {
+    "name": "assets/example.test.tsx",
+    "allowed": false
+  },
+  {
+    "name": "vite.config.js",
+    "allowed": false
+  },
+  {
+    "name": "eslint.config.mjs",
+    "allowed": false
+  },
+  {
+    "name": "tsconfig.app.json",
+    "allowed": false
+  },
+  {
+    "name": "package.json",
+    "allowed": false
+  },
+  {
+    "name": "package-lock.json",
+    "allowed": false
+  },
+  {
+    "name": "npm-shrinkwrap.json",
+    "allowed": false
+  },
+  {
+    "name": "yarn.lock",
+    "allowed": false
+  },
+  {
+    "name": "pnpm-lock.yaml",
+    "allowed": false
+  },
+  {
+    "name": "data-contract.json",
+    "allowed": false
+  },
+  {
+    "name": "deploy-files.json",
+    "allowed": false
+  },
+  {
+    "name": "src/main.js",
+    "allowed": false
+  },
+  {
+    "name": "scripts/build.js",
+    "allowed": false
+  },
+  {
+    "name": "page-zip/page.zip",
+    "allowed": false
+  },
+  {
+    "name": "dist/index.html",
+    "allowed": false
+  },
+  {
+    "name": "node_modules/a.js",
+    "allowed": false
+  },
+  {
+    "name": ".git/config",
+    "allowed": false
+  },
+  {
+    "name": ".seatable/settings.js",
+    "allowed": false
+  },
+  {
+    "name": "setting.js",
+    "allowed": false
+  },
+  {
+    "name": "setting.template.js",
+    "allowed": false
+  },
+  {
+    "name": "assets/.env",
+    "allowed": false
+  },
+  {
+    "name": "README.md",
+    "allowed": false
+  },
+  {
+    "name": "nested/page.zip",
+    "allowed": false
+  },
+  {
+    "name": "config.local",
+    "allowed": false
+  },
+  {
+    "name": "/outside.js",
+    "allowed": false
+  },
+  {
+    "name": "../outside.js",
+    "allowed": false
+  },
+  {
+    "name": "assets/../logo.svg",
+    "allowed": false
+  },
+  {
+    "name": "assets//logo.svg",
+    "allowed": false
+  },
+  {
+    "name": "assets/./logo.svg",
+    "allowed": false
+  },
+  {
+    "name": "assets\\logo.svg",
+    "allowed": false
+  },
+  {
+    "name": "a\u0000b.js",
+    "allowed": false
+  },
+  {
+    "name": "",
+    "allowed": false
+  },
+  {
+    "name": null,
+    "allowed": false
+  },
+  {
+    "name": 42,
+    "allowed": false
+  },
+  {
+    "name": "assets/setting.js",
+    "allowed": false
+  },
+  {
+    "name": "assets/setting.template.js",
+    "allowed": false
+  },
+  {
+    "name": "Assets/BrandLogo.SVG",
+    "allowed": true
+  },
+  {
+    "name": "assets/SeatAble-HTML-Page-SDK-AbC123.Js",
+    "allowed": true
+  },
+  {
+    "name": "SETTING.JS",
+    "allowed": false
+  },
+  {
+    "name": "assets/Setting.Js",
+    "allowed": false
+  },
+  {
+    "name": "assets/Setting.Template.Js",
+    "allowed": false
+  },
+  {
+    "name": "DEPLOY-FILES.JSON",
+    "allowed": false
+  },
+  {
+    "name": "Data-Contract.Json",
+    "allowed": false
+  },
+  {
+    "name": "PACKAGE.JSON",
+    "allowed": false
+  },
+  {
+    "name": "Package-Lock.Json",
+    "allowed": false
+  },
+  {
+    "name": "NPM-SHRINKWRAP.JSON",
+    "allowed": false
+  },
+  {
+    "name": "Yarn.Lock",
+    "allowed": false
+  },
+  {
+    "name": "PNPM-LOCK.YAML",
+    "allowed": false
+  },
+  {
+    "name": "SRC/main.js",
+    "allowed": false
+  },
+  {
+    "name": "assets/Scripts/build.js",
+    "allowed": false
+  },
+  {
+    "name": "NODE_MODULES/a.js",
+    "allowed": false
+  },
+  {
+    "name": "PAGE-ZIP/page.zip",
+    "allowed": false
+  },
+  {
+    "name": "DIST/index.html",
+    "allowed": false
+  },
+  {
+    "name": "TEST/helper.js",
+    "allowed": false
+  },
+  {
+    "name": "Tests/example.js",
+    "allowed": false
+  },
+  {
+    "name": "__TESTS__/index.js",
+    "allowed": false
+  },
+  {
+    "name": "Coverage/report.json",
+    "allowed": false
+  },
+  {
+    "name": ".GIT/config",
+    "allowed": false
+  },
+  {
+    "name": ".SeaTable/settings.js",
+    "allowed": false
+  },
+  {
+    "name": "assets/config.LOCAL.js",
+    "allowed": false
+  },
+  {
+    "name": "config.Local",
+    "allowed": false
+  }
+]
