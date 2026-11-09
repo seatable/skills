@@ -11,6 +11,7 @@ provide the required network and command-execution capabilities.
 | Skill | Description |
 | --- | --- |
 | [`seatable`](skills/seatable/SKILL.md) | Manage SeaTable tables, columns, rows, queries, and file or image attachments through the SeaTable API. |
+| [`seatable-html-page`](skills/seatable-html-page/SKILL.md) | Create HTML pages in SeaTable App. |
 
 ## Requirements
 
